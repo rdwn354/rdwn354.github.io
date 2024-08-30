@@ -526,6 +526,10 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url('assets/img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero img {
@@ -540,7 +544,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: rgba(255, 255, 255, 0.3);
   position: absolute;
   inset: 0;
   z-index: 2;
