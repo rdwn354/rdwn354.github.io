@@ -553,17 +553,17 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+  background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background */
+  padding: 20px;
+  border-radius: 10px; /* Optional: adds rounded corners to the text container */
 }
 
 .hero h2 {
-  margin: 0;
-  font-size: 64px;
-  font-weight: 700;
+  color: #fff;
 }
 
 .hero p {
-  margin: 5px 0 0 0;
-  font-size: 26px;
+  color: #fff;
 }
 
 .hero p span {
