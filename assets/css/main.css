@@ -60,6 +60,17 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  overflow: auto; /* Memungkinkan scroll */
+  scrollbar-width: none; /* Menyembunyikan scroll bar di Firefox */
+}
+
+/* Menyembunyikan scroll bar di Webkit browsers (Chrome, Safari, Edge) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
