@@ -559,11 +559,14 @@ section,
 }
 
 .hero h2 {
-  color: #fff;
+  margin: 0;
+  font-size: 64px;
+  font-weight: 700;
 }
 
 .hero p {
-  color: #fff;
+  margin: 5px 0 0 0;
+  font-size: 26px;
 }
 
 .hero p span {
