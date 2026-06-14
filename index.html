@@ -1,657 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Ridwan</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ridwan Suryadi — Portfolio</title>
+  <meta name="description" content="Portfolio of Muhamad Ridwan Suryadi — Mechatronics Engineer & ML Enthusiast.">
 
-  <!-- Favicons -->
   <link href="assets/img/Ridwan-icon.png" rel="icon">
   <link href="assets/img/Ridwan.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header d-flex flex-column justify-content-center">
+  <!-- ═══ NAVBAR ═══ -->
+  <nav id="navbar" class="navbar">
+    <a href="#hero" class="nav-logo">Ridwan<span>.</span></a>
 
-    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <ul class="nav-links">
+      <li><a href="#hero"      class="nav-link active">Home</a></li>
+      <li><a href="#about"     class="nav-link">About</a></li>
+      <li><a href="#skills"    class="nav-link">Skills</a></li>
+      <li><a href="#resume"    class="nav-link">Resume</a></li>
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#contact"   class="nav-link">Contact</a></li>
+    </ul>
 
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-      </ul>
-    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-  </header>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul>
+      <li><a href="#hero"      class="drawer-link">Home</a></li>
+      <li><a href="#about"     class="drawer-link">About</a></li>
+      <li><a href="#skills"    class="drawer-link">Skills</a></li>
+      <li><a href="#resume"    class="drawer-link">Resume</a></li>
+      <li><a href="#portfolio" class="drawer-link">Portfolio</a></li>
+      <li><a href="#contact"   class="drawer-link">Contact</a></li>
+    </ul>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
-  <main class="main">
+  <main>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
+    <!-- ═══ HERO ═══ -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-layout">
 
-      <img src="assets/img/hero-bg.jpg" alt="">
+          <div class="hero-content" data-aos="fade-right" data-aos-duration="700">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              Available for opportunities
+            </div>
 
-      <div class="container" data-aos="zoom-out">
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <h2>Muhamad Ridwan Suryadi</h2>
-            <p>I'm <span class="typed" data-typed-items="Mechanical Designer, Electrical Engineer, robotics programmer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
-            <div class="social-links">
-              <a href="https://www.instagram.com/dwan_adi/" target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/muhamad-ridwan-suryadi/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <h1 class="hero-name">
+              Muhamad<br>Ridwan<br><span class="name-accent">Suryadi.</span>
+            </h1>
+
+            <div class="hero-role">
+              I'm a&nbsp;<span class="typed" data-typed-items="Mechanical Designer,Electrical Engineer,Robotics Programmer,ML Engineer"></span>
+            </div>
+
+            <p class="hero-tagline">
+              Bridging mechanical precision, embedded systems, and artificial intelligence — turning complex problems into elegant working solutions.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#portfolio" class="btn-primary">View Projects <i class="bi bi-arrow-right"></i></a>
+              <a href="#contact"   class="btn-outline">Let's Talk</a>
+            </div>
+
+            <div class="hero-socials">
+              <a href="https://www.instagram.com/dwan_adi/"            target="_blank" class="soc-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/muhamad-ridwan-suryadi/" target="_blank" class="soc-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="https://github.com/rdwn354"                     target="_blank" class="soc-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+
+          <div class="hero-photo-col" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+            <div class="hero-photo-wrap">
+              <img src="assets/img/profile.jpg" alt="Muhamad Ridwan Suryadi">
+            </div>
+            <div class="hero-stats">
+              <div class="h-stat">
+                <strong>3.91</strong>
+                <span>GPA</span>
+              </div>
+              <div class="h-divider"></div>
+              <div class="h-stat">
+                <strong>7+</strong>
+                <span>Publications</span>
+              </div>
+              <div class="h-divider"></div>
+              <div class="h-stat">
+                <strong>4+</strong>
+                <span>Years Exp</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section id="about" class="section alt-bg">
+      <div class="container">
+        <p class="sec-label" data-aos="fade-up">About</p>
+        <h2 class="sec-title" data-aos="fade-up" data-aos-delay="50">Who I Am</h2>
+
+        <div class="about-layout">
+          <div class="about-photo-col" data-aos="fade-right" data-aos-delay="100">
+            <div class="about-photo-wrap">
+              <img src="assets/img/profile.jpg" alt="Muhamad Ridwan Suryadi">
+            </div>
+          </div>
+
+          <div class="about-text-col" data-aos="fade-left" data-aos-delay="150">
+            <h3>Mechatronics Engineer &amp; ML Enthusiast</h3>
+            <p>
+              Bachelor of Applied Engineering graduate from Universitas Airlangga (GPA 3.91/4.00), specializing in
+              Instrumentation and Control Engineering. I bridge the worlds of mechanical design, embedded systems,
+              and artificial intelligence — turning complex problems into elegant, working solutions.
+            </p>
+            <p>
+              From designing hexapod robot kinematics to training deep learning models and building IoT systems,
+              I bring a multidisciplinary approach backed by real project experience and published research.
+            </p>
+
+            <div class="info-table">
+              <div class="it-row">
+                <span class="it-key"><i class="bi bi-building"></i> University</span>
+                <span class="it-val">Universitas Airlangga</span>
+              </div>
+              <div class="it-row">
+                <span class="it-key"><i class="bi bi-mortarboard"></i> Degree</span>
+                <span class="it-val">Bachelor of Applied Engineering</span>
+              </div>
+              <div class="it-row">
+                <span class="it-key"><i class="bi bi-geo-alt"></i> Location</span>
+                <span class="it-val">Surabaya, East Java, Indonesia</span>
+              </div>
+              <div class="it-row">
+                <span class="it-key"><i class="bi bi-envelope"></i> Email</span>
+                <span class="it-val">muhamad.ridwan.suryadi.354@gmail.com</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-    </section><!-- /Hero Section -->
+    <!-- ═══ SKILLS ═══ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <p class="sec-label" data-aos="fade-up">Skills</p>
+        <h2 class="sec-title" data-aos="fade-up" data-aos-delay="50">What I Know</h2>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>Hi, I'm Muhamad Ridwan Suryadi, a Bachelor of Applied Engineering graduate from Universitas Airlangga with a strong background in 
-              Instrumentation and Control Engineering. I'm passionate about technological innovations and aim to build a career in 
-              instrumentation engineering, mechanical design and system maintenance.
-              I have hands-on experience with robotics, machine learning, AI, electrical wiring, and mechanical design using SolidWorks. I’m 
-              skilled in using PLCs, microcontrollers, and microprocessors. With strong leadership, critical thinking, and teamwork abilities, 
-              I’m eager to learn and contribute to cutting-edge technology.
-            </p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/profile.jpg" class="img-fluid" alt="">
+        <div class="skills-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-item" data-w="90">
+            <div class="skill-head"><span>SolidWorks</span><span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
           </div>
-          <div class="col-lg-8 content">
-            <h2>Mechatronics Engineer &amp; ML enthusiast</h2>
-            <p>Innovating Tomorrow with Precision and Passion
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>Muhamad Ridwan Suryadi</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>University:</strong> <span>Universitas Airlangga</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Applied Engineering</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Major:</strong> <span style="white-space: nowrap;">Instrumentation and Control Engineering</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+6285806691152</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>East Java, Indonesia</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>muhamad.ridwan.suryadi.354@gmail.com</span></li>
+          <div class="skill-item" data-w="85">
+            <div class="skill-head"><span>MS Office</span><span>85%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-item" data-w="80">
+            <div class="skill-head"><span>Arduino / IDE</span><span>80%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-item" data-w="75">
+            <div class="skill-head"><span>Python / C++</span><span>75%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-item" data-w="75">
+            <div class="skill-head"><span>EasyEDA / PCB</span><span>75%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-item" data-w="75">
+            <div class="skill-head"><span>IT Support</span><span>75%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-item" data-w="70">
+            <div class="skill-head"><span>OpenCV</span><span>70%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-item" data-w="70">
+            <div class="skill-head"><span>Deep Learning</span><span>70%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-item" data-w="70">
+            <div class="skill-head"><span>Electrical Design</span><span>70%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-item" data-w="65">
+            <div class="skill-head"><span>PLC</span><span>65%</span></div>
+            <div class="skill-track"><div class="skill-fill"></div></div>
+          </div>
+        </div>
+
+        <div class="tech-tags" data-aos="fade-up" data-aos-delay="150">
+          <span>SolidWorks</span><span>Python</span><span>C++</span><span>Arduino</span>
+          <span>Raspberry Pi</span><span>OpenCV</span><span>TensorFlow</span><span>EasyEDA</span>
+          <span>PLC</span><span>IoT</span><span>Deep Learning</span><span>Linux</span>
+          <span>ESP8266</span><span>Blynk</span><span>YOLO</span><span>K6 Testing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RESUME ═══ -->
+    <section id="resume" class="section alt-bg">
+      <div class="container">
+        <p class="sec-label" data-aos="fade-up">Resume</p>
+        <h2 class="sec-title" data-aos="fade-up" data-aos-delay="50">My Journey</h2>
+
+        <div class="resume-cols">
+
+          <div class="rcol" data-aos="fade-right" data-aos-delay="100">
+
+            <div class="rgroup">
+              <h3 class="rg-title"><i class="bi bi-person-circle"></i> Summary</h3>
+              <div class="summary-box">
+                <h4>Muhamad Ridwan Suryadi</h4>
+                <p>Universitas Airlangga graduate (GPA 3.91/4.00) with expertise in Instrumentation &amp; Control Engineering. Certified in AI development and IT support. Passionate about turning ideas into working machines.</p>
+                <ul class="s-contacts">
+                  <li><i class="bi bi-geo-alt"></i> Surabaya, East Java, Indonesia</li>
+                  <li><i class="bi bi-telephone"></i> (+62) 858-0669-1152</li>
+                  <li><i class="bi bi-envelope"></i> muhamad.ridwan.suryadi.354@gmail.com</li>
                 </ul>
               </div>
             </div>
+
+            <div class="rgroup">
+              <h3 class="rg-title"><i class="bi bi-mortarboard"></i> Education</h3>
+              <div class="tl">
+                <div class="tl-item">
+                  <span class="tl-date">2020 – 2024</span>
+                  <h4>Bachelor of Applied Engineering</h4>
+                  <p class="tl-org">Universitas Airlangga — Instrumentation &amp; Control Engineering</p>
+                  <p>GPA: 3.91 / 4.00 &nbsp;|&nbsp; Final Project: Eye Tracking System for Monitoring Eye Fatigue</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="rgroup">
+              <h3 class="rg-title"><i class="bi bi-people"></i> Organization</h3>
+              <div class="tl">
+                <div class="tl-item">
+                  <span class="tl-date">Jun 2022 – Jun 2023</span>
+                  <h4>Head of Robotic Division</h4>
+                  <p class="tl-org">Airlangga Strike Team Robotics &amp; Instrumentation (ASTRAI)</p>
+                  <ul>
+                    <li>Top-20 national ranking at PUSPRENAS 2022</li>
+                    <li>Designed inverse kinematics for hexapod locomotion</li>
+                    <li>Developed PID-based control system</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="rgroup">
+              <h3 class="rg-title"><i class="bi bi-trophy"></i> Awards &amp; Publications</h3>
+              <div class="tl">
+                <div class="tl-item">
+                  <h4>1st Place — Scientific Paper Competition</h4>
+                  <p class="tl-org">Universitas Airlangga</p>
+                  <p>"Design of Medical Record Using Multi-User Permission Blockchain"</p>
+                </div>
+              </div>
+              <div class="pub-links">
+                <a href="https://vokasi.unair.ac.id/tag/sistem-eye-tracking-2/" target="_blank" class="pub-link"><i class="bi bi-box-arrow-up-right"></i> Eye Tracking System Paper</a>
+                <a href="https://pdki-indonesia.dgip.go.id/detail/1b2d74eb0e4177265d201aa8fd5705655977e48cb34b2a1bb0debbf39da5c404?nomor=EC00202433386&type=copyright" target="_blank" class="pub-link"><i class="bi bi-box-arrow-up-right"></i> HKI — Arrasyi-Kid AI</a>
+                <a href="https://pdki-indonesia.dgip.go.id/detail/03868c7851de3e1563a1288f55d66bbaa88766f869ee9839216acb005982f851?nomor=P00202302913&type=patent" target="_blank" class="pub-link"><i class="bi bi-box-arrow-up-right"></i> Patent — Flexible Axis Panel Surya</a>
+              </div>
+            </div>
+
           </div>
+
+          <div class="rcol" data-aos="fade-left" data-aos-delay="150">
+            <div class="rgroup">
+              <h3 class="rg-title"><i class="bi bi-briefcase"></i> Work Experience</h3>
+              <div class="tl">
+
+                <div class="tl-item">
+                  <span class="tl-date">Aug 2024 – Sep 2024</span>
+                  <h4>Technical Support</h4>
+                  <p class="tl-org">PT. Molca Teknologi Nusantara, Surabaya</p>
+                  <ul>
+                    <li>80%+ performance improvement on Linux Intel NUC for Arrasyi-Kid AI</li>
+                    <li>Implemented Pupil Labs + OpenCV for AI pupil tracking</li>
+                    <li>Designed VR Quest 3 APAR controller for fire-fighting simulation</li>
+                  </ul>
+                </div>
+
+                <div class="tl-item">
+                  <span class="tl-date">Jul 2023 – Dec 2023</span>
+                  <h4>Quality Control Intern</h4>
+                  <p class="tl-org">PT. Molca Teknologi Nusantara, Surabaya</p>
+                  <ul>
+                    <li>K6 load testing ensuring &lt;5s response times</li>
+                    <li>Documented and QC'd 3 major projects across 6 months</li>
+                  </ul>
+                </div>
+
+                <div class="tl-item">
+                  <span class="tl-date">Jan 2022 – Jan 2024</span>
+                  <h4>Research Assistant</h4>
+                  <p class="tl-org">Instrumentation, AI &amp; Renewable Energy Lab, UNAIR</p>
+                  <ul>
+                    <li>Deep learning system for swallow nest classification</li>
+                    <li>IoT real-time photovoltaic tracking system</li>
+                    <li>3D SolidWorks models: flexible axis, fatigue detector, knee-joint fixation</li>
+                  </ul>
+                </div>
+
+                <div class="tl-item">
+                  <span class="tl-date">Jul 2023 – Dec 2023</span>
+                  <h4>Maintenance Electrical Intern</h4>
+                  <p class="tl-org">Pelindo Marine Service, Surabaya</p>
+                  <ul>
+                    <li>Maintained generators, 3-phase pump systems, ship spotlight fixtures</li>
+                    <li>Troubleshot lead-acid battery charging instability (50A 12V/24V)</li>
+                  </ul>
+                </div>
+
+                <div class="tl-item">
+                  <span class="tl-date">Aug 2023 – Sep 2023</span>
+                  <h4>Electrical Technician (Volunteer)</h4>
+                  <p class="tl-org">Solar Panel Installation, Surabaya Village</p>
+                  <ul>
+                    <li>Installed 800W/day off-grid solar systems across 5+ village locations</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /About Section -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Here are some of my experiences working project</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>SolidWorks</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Programming Language (C,C++,Python)</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Electrical</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>IT Support</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Easy EDA</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>PLC</span> <i class="val">65%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>OpenCV</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Deep Learning</span> <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span></span>Extension programming (VSRobot, Colab, Arduino IDE)<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Microsoft word, Excel, Powerpoint</span> <i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Skills Section -->
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>
-          A lot of experience in technology-based projects such as Robotics Project, automation, 
-          Machine Learning and Artificial Intelligence. It is proven by the several awards I have received and also the work 
-          experience that I have gone through. A person with ability to analyze problems, strong thinking capability and good
-          communication. On the other hand, I have good teamwork and easy to learn high curiosity about something new.
-        </p>
-      </div><!-- End Section Title -->
-
+    <!-- ═══ PORTFOLIO ═══ -->
+    <section id="portfolio" class="section">
       <div class="container">
+        <p class="sec-label" data-aos="fade-up">Portfolio</p>
+        <h2 class="sec-title" data-aos="fade-up" data-aos-delay="50">What I Built</h2>
 
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Muhamad Ridwan Suryadi</h4>
-              <p><em>
-                Graduated from Universitas Airlangga with a solid background in Instrumentation and Control Engineering, 
-                holding certificates of training in AI development and IT support. Passionate about mechanical design and 
-                control systems, dedicated to transforming innovative ideas into practical solutions.
-              </em></p>
-              <ul>
-                <li>Surabaya, East Java, Indonesia</li>
-                <li>(+62) 858-0669-1152</li>
-                <li>muhamad.ridwan.suryadi.354@gmail.com</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor of Applied Engineering</h4>
-              <h5>2020 - 2024</h5>
-              <p><em>Instrumentation and Control Engineering technology, Universitas Airlangga</em></p>
-              <p><em>GPA 3.91 of 4.00</em></p>
-              <p>Final Project : Eye Tracking System For Monitoring Eye Fatigue Using Image Processing Methods</p>
-              
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Organizational Experience</h3>
-            <div class="resume-item">
-              <h4>Airlangga Strike Team Robotics and Instrumentation</h4>
-              <h5>Jun 2022 – Jun 2023</h5>
-              <p><em>Head of Robotic Division , Surabaya, Indonesia </em></p>
-              <ul>
-                <li>Coordinated the ASTRAI team, successfully passing regional selections and achieving a top 20 national ranking at
-                    PUSPRENAS 2022, and participated as a national contestant in the Indonesian SAR Robot Contest 2022.</li>
-                <li>Contributed to designing and implementing inverse kinematics to improve robot leg movement efficiency and developed a
-                    PID-based control system for better sensor integration </li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Awards</h3>
-            <div class="resume-item">
-              <h4>Universitas Airlangga</h4>
-              <ul>
-                <li>1st Place in Universitas Airlangga Scientific Paper Competition for "Design of Medical Record Using Multi-User Permission
-                    Blockchain".</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Publication</h3>
-            <div class="resume-item">
-              <ul>
-                <li><a href="https://vokasi.unair.ac.id/tag/sistem-eye-tracking-2/" target="_blank">Eye Tracking System For Monitoring Eye Fatigue Using Image Processing Methods</a></li>
-                <li><a href="https://pdki-indonesia.dgip.go.id/detail/1b2d74eb0e4177265d201aa8fd5705655977e48cb34b2a1bb0debbf39da5c404?nomor=EC00202433386&type=copyright&keyword=EC00202433386" target="blank">
-                  Hak Kekayaan Intelektual (HKI) Ai-Assisted Reading Span, Visual Span, Speed, Syntax Complexity Identifier For Kids
-                  (Arrasyi-Kid)</a></li>
-                <li><a href="https://pdki-indonesia.dgip.go.id/detail/f423a67542480b548ad50cfa2d9f8128103eece6f63728f2508cb24e1bde815c?nomor=EC002023116110&type=copyright&keyword=EC002023116110" target="blank">
-                  Hak Kekayaan Intelektual (HKI) Dashboard Pengklasifikasi dan Pengukuran Kadar Air Sarang Walet
-                </a></li>
-                <li><a href="https://pdki-indonesia.dgip.go.id/detail/58d1fcd780df810e929167a412600d5a1d4d0dd18a441ba98a4f5f79c42b8598?nomor=EC00202328818&type=copyright&keyword=EC00202328818" target="blank">
-                  Metode Akses Rekam Medis Menggunakan Scan Sidik Jari Berbasis Multiuser Permission Blockchain
-                </a></li>
-                <li><a href="https://pdki-indonesia.dgip.go.id/detail/735bc78ffdeae80a9a657a9877a9d3250c5cdaba7a06e6f85f3d3bfb7cdd4569?nomor=EC00202336334&type=copyright&keyword=EC00202336334" target="blank">
-                  Tampilan Blynk Flexible Axis
-                </a></li>
-                <li><a href="https://pdki-indonesia.dgip.go.id/detail/60c79d32ca51efbed71f495c86b01d368f3e9c098c5bd530ed27007954278140?nomor=EC00202336335&type=copyright&keyword=EC00202336335" target="blank">
-                  Desain Rekam Jejak Medis Menggunakan Scan Sidik Jari Berbasis Multiuser Permissions Blockchain
-                </a></li>
-                <li><a href="https://pdki-indonesia.dgip.go.id/detail/03868c7851de3e1563a1288f55d66bbaa88766f869ee9839216acb005982f851?nomor=P00202302913&type=patent&keyword=P00202302913" target="blank">
-                  FLEXIBLE AXIS PANEL SURYA
-                </a></li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            
-
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="resume-title">Experience</h3>
-            <div class="resume-item">
-              <h4>PT. Molca Teknologi Nusantara</h4>
-              <h5>Aug 2024 – Sep 2024</h5>
-              <p><em>Technical Support, Surabaya, Indonesia </em></p>
-              <ul>
-                <li>Troubleshot Linux-based Intel NUC systems, achieving over 80% performance improvement for the "AI-Assisted Reading
-                    Span, Visual Span, Speed, Syntax Complexity Identifier For Kids (Arrasyi-Kid)" research project.</li>
-                <li>Provided technical support in implementing the Pupil Labs framework based on OpenCV and contributed to developing
-                    AI capabilities for pupil tracking systems. </li>
-                <li>Designed a VR Quest 3 controller in the form of a fire extinguisher (APAR) to enhance the fire-fighting training 
-                    experience.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h4>PT. Molca Teknologi Nusantara</h4>
-              <h5>Jul 2023 – Dec 2023</h5>
-              <p><em>Quality Control Intern, Surabaya, Indonesia</em></p>
-              <ul>
-                <li>Operated K6 to perform quality checks and load testing on the LXP System website, ensuring fast and responsive
-                    performance with load times under 5 seconds, thereby enhancing overall user experience.</li>
-                <li>Conducted quality control and detailed documentation for 3 major projects over 6 months, ensuring all systems met high
-                    efficiency and speed standards</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Instrumentation, Artificial Intelligence and Renewable Energy</h4>
-              <h5> Jan 2022 – Jan 2024</h5>
-              <p><em>research Assistant, Surabaya, Indonesia</em></p>
-              <ul>
-                <li>Developed an intelligent control system using deep learning algorithms to classify swallow nests by shape, color, and
-                    moisture, focusing on improving accuracy and efficiency in swallow nest identification</li>
-                <li>Designed and implemented an IoT-based control system for the "Real-Time IoT-Based Photovoltaic Tracking System"
-                    research, optimizing algorithms to enhance solar panel power efficiency.</li>
-                <li>Designed 3D models using SolidWorks for various research projects, including a flexible axis, fatigue detector, 
-                    and knee-joint fixation.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Pelindo Marine Service</h4>
-              <h5>Jul 2023 – Dec 2023</h5>
-              <p><em>Maintenance Electrical Intern, Surabaya, Indonesia</em></p>
-              <ul>
-                <li>Assisted in electrical maintenance, including the upkeep of generators, 3-phase electric water pump control systems, 
-                  and repair of ship spotlight fixtures.</li>
-                <li>Performed troubleshooting and repairs on cases of unstable voltage in charging systems for lead-acid batteries with 
-                  specifications of 50A 12V/24V, ensuring they met standard conditions.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Volunteer</h3>
-            <div class="resume-item">
-              <h4>Solar Panel Installation</h4>
-              <h5>Agu 2023 – Sep 2023</h5>
-              <p><em>Electrical Technician , Surabaya, Indonesia </em></p>
-              <ul>
-                <li>Installed off-grid solar panel systems with an 800-watt daily consumption for street lighting in over 5 locations within a
-                  village.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-          </div>
-        </div>
-      </div>
-
-    </section><!-- /Resume Section -->
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <div class="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
+          <ul class="pf-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".Mechanical">Design</li>
             <li data-filter=".Electrical">Electrical</li>
             <li data-filter=".Automation">Automation</li>
-            <li data-filter=".AI">AI/ML</li>
-          </ul><!-- End Portfolio Filters -->
+            <li data-filter=".AI">AI / ML</li>
+          </ul>
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="pf-grid isotope-container" data-aos="fade-up" data-aos-delay="150">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item AI">
-              <img src="assets/img/masonry-portfolio/mechanical/Final project.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Eye Tracking Device</h4>
-                <p>my final project fot detecting eye fatigue using blink count</p>
-                <a href="assets/img/masonry-portfolio/mechanical/Final project.jpg" title="Eye Tracking Device" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-Eye-tracking-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            <div class="pf-item isotope-item AI">
+              <div class="pf-card">
+                <div class="pf-img">
+                  <img src="assets/img/masonry-portfolio/mechanical/Final project.jpg" alt="Eye Tracking">
+                  <div class="pf-overlay">
+                    <a href="assets/img/masonry-portfolio/mechanical/Final project.jpg" data-gallery="pf-gallery-1" class="pf-ico glightbox"><i class="bi bi-zoom-in"></i></a>
+                    <a href="portfolio-Eye-tracking-details.html" class="pf-ico"><i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+                <div class="pf-body">
+                  <span class="pf-tag">AI / ML</span>
+                  <h3>Eye Tracking Device</h3>
+                  <p>Detecting eye fatigue via blink count &amp; image processing — final project.</p>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item Electrical">
-              <img src="assets/img/masonry-portfolio/Electrical/PCB-Desain.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>PCB Alegro</h4>
-                <p>PCB Alegro for SAR Indonesia Robot Contest 2022</p>
-                <a href="assets/img/masonry-portfolio/Electrical/PCB-Desain.png" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--a href="portfolio-PCB-Alegro.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a -->
+            <div class="pf-item isotope-item Automation">
+              <div class="pf-card">
+                <div class="pf-img">
+                  <img src="assets/img/portfolio/alegro lama/view3/view3.jpg" alt="Hexapod">
+                  <div class="pf-overlay">
+                    <a href="assets/img/portfolio/alegro lama/view3/view3.jpg" data-gallery="pf-gallery-1" class="pf-ico glightbox"><i class="bi bi-zoom-in"></i></a>
+                    <a href="portfolio-details-hexapod.html" class="pf-ico"><i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+                <div class="pf-body">
+                  <span class="pf-tag">Automation</span>
+                  <h3>Hexapod Movement</h3>
+                  <p>Inverse kinematics &amp; C++ locomotion programming.</p>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item Automation">
-              <img src="assets/img/portfolio/alegro lama/view3/view3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Hexapod Movement</h4>
-                <p>Programming for hexapod movement using C++</p>
-                <a href="assets/img/masonry-portfolio/" title="Hexapod Robot" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details-hexapod.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            <div class="pf-item isotope-item Mechanical">
+              <div class="pf-card">
+                <div class="pf-img">
+                  <img src="assets/img/masonry-portfolio/mechanical/alegro.jpg" alt="Alegro v2">
+                  <div class="pf-overlay">
+                    <a href="assets/img/masonry-portfolio/mechanical/alegro.jpg" data-gallery="pf-gallery-1" class="pf-ico glightbox"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+                <div class="pf-body">
+                  <span class="pf-tag">Design</span>
+                  <h3>Alegro v2</h3>
+                  <p>Updated SAR hexapod robot for KRSRI 2022.</p>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item Mechanical">
-              <img src="assets/img/masonry-portfolio/mechanical/alegro.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Alegro v2</h4>
-                <p>Update design robot for SAR Indonesia Contest 2022</p>
-                <a href="assets/img/masonry-portfolio/mechanical/alegro.jpg" title="Alegro v2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--a href="portfolio-details-hexapod2.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a-->
+            <div class="pf-item isotope-item Electrical">
+              <div class="pf-card">
+                <div class="pf-img">
+                  <img src="assets/img/masonry-portfolio/Electrical/PCB-Desain.png" alt="PCB Alegro">
+                  <div class="pf-overlay">
+                    <a href="assets/img/masonry-portfolio/Electrical/PCB-Desain.png" data-gallery="pf-gallery-2" class="pf-ico glightbox"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+                <div class="pf-body">
+                  <span class="pf-tag">Electrical</span>
+                  <h3>PCB Alegro</h3>
+                  <p>Custom PCB for SAR Indonesia Robot Contest 2022.</p>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item Electrical">
-              <img src="assets/img/masonry-portfolio/Electrical/PCB-Desain-2.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Arduino UNO</h4>
-                <p>My final project for create PCB using Esay EDA</p>
-                <a href="assets/img/masonry-portfolio/Electrical/PCB-Desain-2.png" title="Arduino UNO" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a-->
+            <div class="pf-item isotope-item AI">
+              <div class="pf-card">
+                <div class="pf-img">
+                  <img src="assets/img/masonry-portfolio/robotics/1703836904860.jpeg" alt="EcoBin">
+                  <div class="pf-overlay">
+                    <a href="assets/img/masonry-portfolio/robotics/1703836904860.jpeg" data-gallery="pf-gallery-1" class="pf-ico glightbox"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+                <div class="pf-body">
+                  <span class="pf-tag">AI / ML</span>
+                  <h3>EcoBin</h3>
+                  <p>Smart waste bin using CNN trash detection.</p>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item Automation">
-              <img src="assets/img/masonry-portfolio/robotics/flaxible axis.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Solar Tracker</h4>
-                <p>Mu project about solar tracker flaxible asix</p>
-                <a href="assets/img/masonry-portfolio/robotics/flaxible axis.png" title="Flaxible Axis Panel Surya" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--a href="portfolio-details-solar.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a-->
+            <div class="pf-item isotope-item Automation">
+              <div class="pf-card">
+                <div class="pf-img">
+                  <img src="assets/img/masonry-portfolio/robotics/flaxible axis.png" alt="Solar Tracker">
+                  <div class="pf-overlay">
+                    <a href="assets/img/masonry-portfolio/robotics/flaxible axis.png" data-gallery="pf-gallery-1" class="pf-ico glightbox"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+                <div class="pf-body">
+                  <span class="pf-tag">Automation</span>
+                  <h3>Solar Tracker</h3>
+                  <p>Real-time IoT photovoltaic flexible axis tracking.</p>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item Mechanical">
-              <img src="assets/img/masonry-portfolio/mechanical/knee-joint.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Knee-joint Fixation</h4>
-                <p>Project collaboration with Teknologi Radiologi Pencitraan</p>
-                <a href="assets/img/masonry-portfolio/mechanical/knee-joint.jpg" title="Knee-joint Fixation" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--a href="portfolio-details-trp.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a-->
+            <div class="pf-item isotope-item Mechanical">
+              <div class="pf-card">
+                <div class="pf-img">
+                  <img src="assets/img/masonry-portfolio/mechanical/knee-joint.jpg" alt="Knee-joint">
+                  <div class="pf-overlay">
+                    <a href="assets/img/masonry-portfolio/mechanical/knee-joint.jpg" data-gallery="pf-gallery-1" class="pf-ico glightbox"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+                <div class="pf-body">
+                  <span class="pf-tag">Design</span>
+                  <h3>Knee-joint Fixation</h3>
+                  <p>3D model for Radiologi Pencitraan collaboration.</p>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item Electrical">
-              <img src="assets/img/masonry-portfolio/Electrical/PCB-Desain-3.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Solar tracker PCB</h4>
-                <p>create ocb with using esp 8266 and arduino mega</p>
-                <a href="assets/img/masonry-portfolio/Electrical/PCB-Desain-3.png" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a-->
+            <div class="pf-item isotope-item Electrical">
+              <div class="pf-card">
+                <div class="pf-img">
+                  <img src="assets/img/masonry-portfolio/Electrical/PCB-Desain-3.png" alt="Solar PCB">
+                  <div class="pf-overlay">
+                    <a href="assets/img/masonry-portfolio/Electrical/PCB-Desain-3.png" data-gallery="pf-gallery-2" class="pf-ico glightbox"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+                <div class="pf-body">
+                  <span class="pf-tag">Electrical</span>
+                  <h3>Solar Tracker PCB</h3>
+                  <p>ESP8266 + Arduino Mega PCB for PV tracking.</p>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item AI">
-              <img src="assets/img/masonry-portfolio/robotics/1703836904860.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>EcoBin</h4>
-                <p>an AI can detect trash using CNN</p>
-                <a href="assets/img/masonry-portfolio/robotics/1703836904860.jpeg" title="EcoBin" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--a href="portfolio-details-ecobin.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a-->
+            <div class="pf-item isotope-item Mechanical">
+              <div class="pf-card">
+                <div class="pf-img">
+                  <img src="assets/img/masonry-portfolio/mechanical/Apar/Apar.jpg" alt="APAR Console">
+                  <div class="pf-overlay">
+                    <a href="assets/img/masonry-portfolio/mechanical/Apar/Apar.jpg" data-gallery="pf-gallery-1" class="pf-ico glightbox"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+                <div class="pf-body">
+                  <span class="pf-tag">Design</span>
+                  <h3>APAR Console</h3>
+                  <p>VR Quest 3 fire extinguisher bracket controller.</p>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item Mechanical">
-              <img src="assets/img/masonry-portfolio/mechanical/Apar/Apar.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Apar Console</h4>
-                <p>Bracket Apar Console for VR Quest 3</p>
-                <a href="assets/img/masonry-portfolio/mechanical/Apar/Apar.jpg" title="Apar Console" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--a href="portfolio-details-apar.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a-->
+            <div class="pf-item isotope-item Electrical">
+              <div class="pf-card">
+                <div class="pf-img">
+                  <img src="assets/img/masonry-portfolio/Electrical/PCB-Desain-5.png" alt="ATmega 16">
+                  <div class="pf-overlay">
+                    <a href="assets/img/masonry-portfolio/Electrical/PCB-Desain-5.png" data-gallery="pf-gallery-2" class="pf-ico glightbox"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+                <div class="pf-body">
+                  <span class="pf-tag">Electrical</span>
+                  <h3>ATmega 16 PCB</h3>
+                  <p>Custom microcontroller PCB in EasyEDA.</p>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item Electrical">
-              <img src="assets/img/masonry-portfolio/Electrical/PCB-Desain-5.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>PCB design using ATmega 16</h4>
-                <p>This is PCB design using ATmega 16 and create in Easy Eda</p>
-                <a href="assets/img/masonry-portfolio/Electrical/PCB-Desain-5.png" title="ATmega 16" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--a href="portfolio-details-atmega16.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a-->
+            <div class="pf-item isotope-item Mechanical">
+              <div class="pf-card">
+                <div class="pf-img">
+                  <img src="assets/img/masonry-portfolio/mechanical/Fade.jpg" alt="FADE">
+                  <div class="pf-overlay">
+                    <a href="assets/img/masonry-portfolio/mechanical/Fade.jpg" data-gallery="pf-gallery-1" class="pf-ico glightbox"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+                <div class="pf-body">
+                  <span class="pf-tag">Design</span>
+                  <h3>FADE</h3>
+                  <p>Fatigue detector on Raspberry Pi 3 B+.</p>
+                </div>
               </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item Mechanical">
-              <img src="assets/img/masonry-portfolio/mechanical/Fade.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Fade</h4>
-                <p>Fatigue detector using Raspberry Pi 3 b+</p>
-                <a href="assets/img/masonry-portfolio/mechanical/Fade.jpg" title="Fade" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <!--a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a-->
-              </div>
-            </div><!-- End Portfolio Item -->
-          </div><!-- End Portfolio Container -->
-        </div>
-      </div>
-    </section><!-- /Portfolio Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Address</h3>
-                <p>Surabaya, East Java, Indonesia</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Call Me</h3>
-                <p>+62858-0669-1152</p>
-              </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email Us</h3>
-                <p>muhamad.ridwan.suryadi.354@gmail.com</p>
-              </div>
-            </div><!-- End Info Item -->
+            </div>
 
           </div>
-
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Contact Section -->
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact" class="section alt-bg">
+      <div class="container">
+        <p class="sec-label" data-aos="fade-up">Contact</p>
+        <h2 class="sec-title" data-aos="fade-up" data-aos-delay="50">Get In Touch</h2>
+
+        <div class="contact-layout">
+          <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+            <p>Have a project in mind or want to collaborate? I'd love to hear from you. Fill out the form or reach me directly.</p>
+
+            <div class="ci-item">
+              <i class="bi bi-geo-alt"></i>
+              <div><strong>Location</strong><span>Surabaya, East Java, Indonesia</span></div>
+            </div>
+            <div class="ci-item">
+              <i class="bi bi-telephone"></i>
+              <div><strong>Phone</strong><span>(+62) 858-0669-1152</span></div>
+            </div>
+            <div class="ci-item">
+              <i class="bi bi-envelope"></i>
+              <div><strong>Email</strong><span>muhamad.ridwan.suryadi.354@gmail.com</span></div>
+            </div>
+
+            <div class="ci-socials">
+              <a href="https://www.instagram.com/dwan_adi/"            target="_blank" class="soc-link"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/muhamad-ridwan-suryadi/" target="_blank" class="soc-link"><i class="bi bi-linkedin"></i></a>
+              <a href="https://github.com/rdwn354"                     target="_blank" class="soc-link"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+
+          <div class="contact-form-col" data-aos="fade-left" data-aos-delay="150">
+            <form action="forms/contact.php" method="post" class="php-email-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" class="form-input" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" name="subject" class="form-input" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea name="message" class="form-input" placeholder="Your Message" rows="6" required></textarea>
+              </div>
+              <div class="loading">Sending...</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Message sent successfully!</div>
+              <button type="submit" class="btn-primary">
+                Send Message <i class="bi bi-send"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
     <div class="container">
-      <h3 class="sitename">Muhamad Ridwan Suryadi</h3>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Alex Smith</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+      <p>&copy; 2024 Muhamad Ridwan Suryadi. All rights reserved.</p>
+      <div class="foot-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scrollTop" class="scroll-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

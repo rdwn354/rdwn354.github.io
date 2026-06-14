@@ -1,261 +1,134 @@
 /**
-* Template Name: MyResume
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Portfolio — Muhamad Ridwan Suryadi
+ * Clean light theme. No Bootstrap.
+ */
 
-(function() {
-  "use strict";
+(function () {
+  'use strict';
 
-  /**
-   * Header toggle
-   */
-  const headerToggleBtn = document.querySelector('.header-toggle');
+  /* ═══ NAVBAR ═══ */
+  const navbar   = document.getElementById('navbar');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
 
-  function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
-  }
-  headerToggleBtn.addEventListener('click', headerToggle);
+  function updateNav() {
+    if (!navbar) return;
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.header-show')) {
-        headerToggle();
+    const offset = window.scrollY + 100;
+    sections.forEach(sec => {
+      if (offset >= sec.offsetTop && offset < sec.offsetTop + sec.offsetHeight) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.nav-link[href="#${sec.id}"]`);
+        if (a) a.classList.add('active');
       }
     });
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
 
-  });
+  /* ═══ MOBILE DRAWER ═══ */
+  const navToggle      = document.getElementById('navToggle');
+  const mobileDrawer   = document.getElementById('mobileDrawer');
+  const drawerBackdrop = document.getElementById('drawerBackdrop');
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+  const openDrawer  = () => {
+    mobileDrawer.classList.add('open');
+    drawerBackdrop.classList.add('open');
+    navToggle.classList.add('open');
+    document.body.classList.add('no-scroll');
+  };
+  const closeDrawer = () => {
+    mobileDrawer.classList.remove('open');
+    drawerBackdrop.classList.remove('open');
+    navToggle.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+  };
+
+  if (navToggle) navToggle.addEventListener('click', () =>
+    mobileDrawer.classList.contains('open') ? closeDrawer() : openDrawer()
+  );
+  if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+  document.querySelectorAll('.drawer-link').forEach(l => l.addEventListener('click', closeDrawer));
+
+  /* ═══ SCROLL TOP ═══ */
+  const scrollTop = document.getElementById('scrollTop');
+  if (scrollTop) {
+    window.addEventListener('scroll', () =>
+      scrollTop.classList.toggle('active', window.scrollY > 300), { passive: true }
+    );
+    scrollTop.addEventListener('click', e => {
       e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ═══ SMOOTH SCROLL ═══ */
+  const NAV_H = 64;
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      window.scrollTo({ top: target.offsetTop - NAV_H, behavior: 'smooth' });
     });
   });
 
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
-
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
-  }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
-
-  /**
-   * Init typed.js
-   */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
-  }
-
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
-  /**
-   * Animate the skills items on reveal
-   */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
-        });
-      }
-    });
-  });
-
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
-  /**
-   * Init isotope layout and filters
-   */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
-
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
-    });
-
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
-        }
-      }, false);
-    });
-
-  });
-
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      // Initialize Swiper instance
-      let swiperInstance = new Swiper(swiperElement, config);
-
-      // Autoplay video on the first active slide
-      swiperInstance.on('init', function() {
-        playVideoOnActiveSlide(swiperElement);
-      });
-
-      // Autoplay video when slide changes
-      swiperInstance.on('slideChange', function() {
-        handleSlideChange(swiperElement);
-      });
-
-      // Call the autoplay handler after initializing
-      playVideoOnActiveSlide(swiperElement);
-    });
-  }
-  window.addEventListener("load", initSwiper);
-
-  function playVideoOnActiveSlide(swiperElement) {
-    let activeSlide = swiperElement.querySelector('.swiper-slide-active');
-    let video = activeSlide.querySelector('video');
-    if (video) {
-      video.play();
-    }
-  }
-
-  function handleSlideChange(swiperElement) {
-    let previousSlide = swiperElement.querySelector('.swiper-slide-prev');
-    let previousVideo = previousSlide ? previousSlide.querySelector('video') : null;
-    if (previousVideo) {
-      previousVideo.pause();
-      previousVideo.currentTime = 0;
-    }
-
-    let activeSlide = swiperElement.querySelector('.swiper-slide-active');
-    let activeVideo = activeSlide.querySelector('video');
-    if (activeVideo) {
-      activeVideo.play();
-    }
-  }
-
-  /**
-   * Correct scrolling position upon page load for URLs containing hash links.
-   */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', () => {
     if (window.location.hash) {
-      if (document.querySelector(window.location.hash)) {
-        setTimeout(() => {
-          let section = document.querySelector(window.location.hash);
-          let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
-          window.scrollTo({
-            top: section.offsetTop - parseInt(scrollMarginTop),
-            behavior: 'smooth'
-          });
-        }, 100);
-      }
+      const t = document.querySelector(window.location.hash);
+      if (t) setTimeout(() => window.scrollTo({ top: t.offsetTop - NAV_H, behavior: 'smooth' }), 200);
     }
   });
 
-  /**
-   * Navmenu Scrollspy
-   */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
+  /* ═══ AOS ═══ */
+  window.addEventListener('load', () => {
+    AOS.init({ duration: 650, easing: 'ease-out-cubic', once: true, offset: 60 });
+  });
 
-  function navmenuScrollspy() {
-    navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
-      if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
-      } else {
-        navmenulink.classList.remove('active');
-      }
-    })
+  /* ═══ TYPED.JS ═══ */
+  const typedEl = document.querySelector('.typed');
+  if (typedEl) {
+    new Typed('.typed', {
+      strings: typedEl.getAttribute('data-typed-items').split(','),
+      loop: true, typeSpeed: 70, backSpeed: 35, backDelay: 2200,
+    });
   }
-  window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
+
+  /* ═══ GLIGHTBOX ═══ */
+  GLightbox({ selector: '.glightbox' });
+
+  /* ═══ ISOTOPE ═══ */
+  document.querySelectorAll('.isotope-layout').forEach(wrap => {
+    let iso;
+    imagesLoaded(wrap.querySelector('.isotope-container'), () => {
+      iso = new Isotope(wrap.querySelector('.isotope-container'), {
+        itemSelector: '.isotope-item',
+        layoutMode: 'fitRows',
+      });
+    });
+
+    wrap.querySelectorAll('.isotope-filters li').forEach(btn => {
+      btn.addEventListener('click', function () {
+        wrap.querySelector('.filter-active').classList.remove('filter-active');
+        this.classList.add('filter-active');
+        if (iso) iso.arrange({ filter: this.getAttribute('data-filter') });
+      });
+    });
+  });
+
+  /* ═══ SKILL BARS ═══ */
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.skill-item').forEach(item => {
+      new Waypoint({
+        element: item,
+        offset: '92%',
+        handler: function () {
+          const fill = item.querySelector('.skill-fill');
+          if (fill) fill.style.width = item.getAttribute('data-w') + '%';
+        },
+      });
+    });
+  });
 
 })();
